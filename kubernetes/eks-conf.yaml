@@ -7,21 +7,21 @@ metadata:
   region: us-east-1
   version: "1.20" # kubernetes version
 vpc: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/04-existing-vpc.yaml
-  id: "vpc-016a07ed20fXXXXXX"
+  id: "vpc-005999a963d8335d1"
   subnets:
     public:
       my-public-201-a:
-        id: "subnet-0a9e803bbcbXXXXXX"
+        id: "subnet-0f94b9cbddffe0755"
         az: "us-east-1a"
       my-public-201-b:
-        id: "subnet-0935565a8e4XXXXXX"
+        id: "subnet-0e584785ac7b800da"
         az: "us-east-1b"
     private:
       my-private-201-a:
-        id: "subnet-0ee10774970XXXXXX"
+        id: "subnet-064f7cb3f674578d4"
         az: "us-east-1a"
       my-private-201-b:
-        id: "subnet-001d8eba054XXXXXX"
+        id: "subnet-03627d6c3c7f9c5fd"
         az: "us-east-1b"
   clusterEndpoints:
     publicAccess:  true
