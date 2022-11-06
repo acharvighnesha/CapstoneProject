@@ -74,7 +74,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       instanceTypes:
         - t2.medium
     desiredCapacity: 1
-    minSize: 0
+    minSize: 1
     maxSize: 3
     privateNetworking: true # include only in private subnet
     subnets:
@@ -88,7 +88,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       instanceTypes:
         - t2.medium
     desiredCapacity: 0
-    minSize: 0
+    minSize: 1
     maxSize: 1
     subnets:
       - my-public-201-a
@@ -101,7 +101,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       instanceTypes:
         - t2.medium
     desiredCapacity: 0
-    minSize: 0
+    minSize: 1
     maxSize: 1
     subnets:
       - my-public-201-a
