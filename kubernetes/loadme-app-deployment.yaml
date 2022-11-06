@@ -3,7 +3,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: upg-loadme
-  namespace: demo
+  namespace: my-eks-201
   labels:
     app: upg-loadme
 spec:
