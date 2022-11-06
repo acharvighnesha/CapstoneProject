@@ -1,0 +1,39 @@
+Create a EC2 machine - AWS cli + Terraform
+EC2 -> IAM role having admin access
+create s3 bucket
+provider.tf, vpc.tf [modules]
+terraform plan and apply -> 3 tier n/w arch ready on aws
+eks cluster - provided template - 5 changes - vpc and subnets
+eksctl create cluster -f abc.yaml
+kubectl get nodes -> 1 node [2 machines]
+kubectl top nodes/ kubectl top pods
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+cluster auto scaler - mention name of cluster in yaml and then just apply that file - https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+
+
+----------------------------------------------------------------------------------------
+1.)Write down dockerfile for loadme app - FROM node:12, COPY . ., RUN npm install, RUN npm build, CMD ["npm" , "start"]
+docker build . -> image -> docker run -itd -p p1:p2 image 
+2.)EC2-IP:P1 
+3.)Dockerhub/ ECR
+4.)Deployment, Service [LoadBalancer]
+6.)add a new node group in eks yaml file - eksctl create ng -f abc.yaml
+7.)toleration and affinity in deployment
+8.)apply the file -> pod should come up on newly created machine
+
+ensure taints & labels on machine
+
+
+------------------------------------------------------------------------------
+task3
+1.Install redis using helm using custom values
+2.redis pod [kubectl run redis --image redis]
+3.exec redis pod [2] - using redis cli we will insert some data to redis cluster [1]
+4.delete the redis cluster pod [1]
+5.exec redis pod [2] - using redis cli we will try to fetch the data that we inserted
+
+-------------------------------------------------------------------------------
+task4
+1.create hpa(horizontal pod autoscaler)
+2.kubectl get hpa
+3.prometheus using helm
