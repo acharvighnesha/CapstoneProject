@@ -7,3 +7,10 @@ metadata:
 spec:
   # Add hpa spec as per requirement
   # Refer: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#creating-the-autoscaler-declaratively
+  scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: upg-loadme
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50

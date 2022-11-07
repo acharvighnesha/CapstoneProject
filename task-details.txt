@@ -8,7 +8,8 @@ eksctl create cluster -f abc.yaml
 kubectl get nodes -> 1 node [2 machines]
 kubectl top nodes/ kubectl top pods
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-cluster auto scaler - mention name of cluster in yaml and then just apply that file - https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+cluster auto scaler - mention name of cluster in yaml and then just apply that 
+file - https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
 
 
 ----------------------------------------------------------------------------------------
@@ -23,7 +24,11 @@ docker build . -> image -> docker run -itd -p p1:p2 image
 
 ensure taints & labels on machine
 
-
+create the namespace
+(kubectl create ns loadme-app)
+kubectl get pods -n loadme-app  where loadme-app is the name space
+kubectl get hpa -n loadme-app
+kubectl get svc -n loadme-app
 ------------------------------------------------------------------------------
 task3
 1.Install redis using helm using custom values

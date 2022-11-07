@@ -7,8 +7,8 @@ module "sg_private" {
 
   ingress_with_cidr_blocks = [
     {
-      from_port   = 22
-      to_port     = 80
+      from_port   = 0
+      to_port     = 65535
       protocol    = "tcp"
       description = "ssh ports"
       cidr_blocks = "10.0.0.0/16"
@@ -35,7 +35,7 @@ module "sg_ssh" {
   ingress_with_cidr_blocks = [
     {
       from_port   = 22
-      to_port     = 8080
+      to_port     = 65535
       protocol    = "tcp"
       description = "ssh ports"
       cidr_blocks = "0.0.0.0/0"
