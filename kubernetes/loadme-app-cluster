@@ -1,0 +1,15 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: upg-loadme
+  namespace: my-eks-201
+spec:
+  selector:
+    app: upg-loadme
+  type: ClusterIP
+  ports:
+  - name: app-port
+    protocol: TCP
+    port: 80
+    targetPort: 8081
