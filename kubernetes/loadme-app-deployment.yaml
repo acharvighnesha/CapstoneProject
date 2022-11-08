@@ -56,7 +56,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: upg-loadme
-  namespace: demo
+  namespace: my-eks-201
 spec:
   selector:
     app: upg-loadme
