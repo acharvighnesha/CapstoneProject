@@ -92,3 +92,21 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
     maxSize: 1
     subnets:
       - my-public-201-a
+      
+  - name: private-loadme
+    labels: { role: workers }
+    tags:
+      k8s.io/cluster-autoscaler/enabled: "true"
+      k8s.io/cluster-autoscaler/my-eks-201: "shared"
+    instancesDistribution:
+      instanceTypes:
+        - t2.medium
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 1
+    subnets:
+      - my-private-201-a
+    taints:
+      - key: appname
+        value: "loadme"
+        effect: NoSchedule
