@@ -7,9 +7,7 @@ metadata:
 spec:
   selector:
     app: upg-loadme
-  type: ClusterIP
+  type: LoadBalancer
   ports:
-  - name: app-port
-    protocol: TCP
     port: 80
     targetPort: 8081
