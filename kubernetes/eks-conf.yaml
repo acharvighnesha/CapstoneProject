@@ -92,7 +92,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
     maxSize: 1
     subnets:
       - my-public-201-a
-      
+
   - name: private-loadme
     labels: { role: workers }
     tags:
@@ -105,7 +105,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
     minSize: 1
     maxSize: 1
     subnets:
-      - my-private-201-a
+      - my-private-201-b
     taints:
       - key: appname
         value: "loadme"
