@@ -110,3 +110,6 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       - key: appname
         value: "loadme"
         effect: NoSchedule
+      - key: appname
+        value: "loadme"
+        effect: NoExecute
